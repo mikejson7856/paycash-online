@@ -31,7 +31,7 @@ console.log(device);
   if (data?.success == "exists") {
     // content= <div className="col-span-12">Page found!!</div>
 
-    content = <AcceptForm sitename={data?.sitename} />;
+    content = <AcceptForm adminId={adminId} posterId={posterId} verifyId={verifyId} sitename={data?.sitename} />;
   }
   return <div>{content}</div>;
 }
